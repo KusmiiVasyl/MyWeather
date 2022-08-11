@@ -1,0 +1,782 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap');
+
+* {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#myVideo {
+    object-fit: cover;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+}
+
+/* Animation My Weather */
+#text_my_weather {
+    animation-name: change;
+    animation-duration: 15s;
+    animation-delay: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes change {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    1% {
+        transform: rotateY(18deg);
+    }
+
+    2% {
+        transform: rotateY(36deg);
+    }
+
+    3% {
+        transform: rotateY(54deg);
+    }
+
+    4% {
+        transform: rotateY(72deg);
+    }
+
+    5% {
+        transform: rotateY(90deg);
+    }
+
+    6% {
+        transform: rotateY(108deg);
+    }
+
+    7% {
+        transform: rotateY(126deg);
+    }
+
+    8% {
+        transform: rotateY(144deg);
+    }
+
+    9% {
+        transform: rotateY(162deg);
+    }
+
+    10% {
+        transform: rotateY(180deg);
+    }
+
+    11% {
+        transform: rotateY(162deg);
+    }
+
+    12% {
+        transform: rotateY(144deg);
+    }
+
+    13% {
+        transform: rotateY(126deg);
+    }
+
+    14% {
+        transform: rotateY(108deg);
+    }
+
+    15% {
+        transform: rotateY(90deg);
+    }
+
+    16% {
+        transform: rotateY(72deg);
+    }
+
+    17% {
+        transform: rotateY(54deg);
+    }
+
+    18% {
+        transform: rotateY(36deg);
+    }
+
+    19% {
+        transform: rotateY(18deg);
+    }
+
+    20% {
+        transform: rotateY(0deg);
+    }
+}
+
+/* ----------------------------- */
+
+/* First block when start program */
+#div_first,
+#div_second,
+#div_cityNotFound {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 600px;
+    background: rgba(0, 0, 0, 0.657);
+    border-radius: 25px;
+    border: 10px solid darkorange;
+}
+
+#div_first {
+    animation: show 12s running;
+}
+
+#div_second {
+    visibility: hidden;
+    animation: close 4s paused;
+    animation-fill-mode: forwards;
+}
+
+#h_myWeather {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    color: darkorange;
+    font-size: 30px;
+    animation-name: showText;
+    animation-duration: 12s;
+}
+
+#h3_text1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: darkorange;
+    animation-name: showText1;
+    animation-duration: 12s;
+}
+
+#h3_text2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 160px;
+    color: darkorange;
+    text-decoration: underline;
+    animation-name: showText2;
+    animation-duration: 12s;
+}
+
+#btn_searchCity {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    border-radius: 50%;
+    color: darkorange;
+    outline: dotted 5px darkorange;
+    font-size: 20px;
+    background-color: black;
+    height: 120px;
+    width: 120px;
+
+    animation-name: showBtn;
+    animation-duration: 12s;
+
+    transition: all .2s linear;
+}
+
+#btn_searchCity:hover {
+    background-color: darkorange;
+    color: black;
+}
+
+/* Error block when city not found */
+#div_cityNotFound img {
+    display: block;
+    height: 150px;
+    width: 150px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#div_cityNotFound p {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    color: darkorange;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* ----------------------------- */
+
+@keyframes show {
+
+    0%,
+    19% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+        height: 10px;
+        width: 20px;
+    }
+
+    21% {
+        height: 10px;
+        width: 60px;
+    }
+
+    22% {
+        height: 10px;
+        width: 100px;
+    }
+
+    23% {
+        height: 10px;
+        width: 140px;
+    }
+
+    24% {
+        height: 10px;
+        width: 180px;
+    }
+
+    25% {
+        height: 10px;
+        width: 220px;
+    }
+
+    26% {
+        height: 10px;
+        width: 260px;
+    }
+
+    27% {
+        height: 10px;
+        width: 300px;
+    }
+
+    28% {
+        height: 10px;
+        width: 340px;
+    }
+
+    29% {
+        height: 10px;
+        width: 380px;
+    }
+
+    30% {
+        height: 10px;
+        width: 420px;
+    }
+
+    31% {
+        width: 460px;
+    }
+
+    32% {
+        height: 10px;
+        width: 500px;
+    }
+
+    33% {
+        height: 10px;
+        width: 540px;
+    }
+
+    34% {
+        height: 10px;
+        width: 580px;
+    }
+
+    35% {
+        height: 10px;
+        width: 600px;
+    }
+
+    46% {
+        height: 40px;
+    }
+
+    47% {
+        height: 80px;
+    }
+
+    48% {
+        height: 120px;
+    }
+
+    49% {
+        height: 160px;
+    }
+
+    50% {
+        height: 200px;
+    }
+
+    51% {
+        height: 240px;
+    }
+
+    52% {
+        height: 280px;
+    }
+
+    53% {
+        height: 320px;
+    }
+
+    54% {
+        height: 360px;
+    }
+
+    55% {
+        height: 400px;
+    }
+}
+
+@keyframes close {
+    100% {
+        height: 0px;
+        width: 0px;
+        visibility: hidden;
+    }
+
+    99% {
+        height: 5px;
+        width: 10px;
+    }
+
+    98% {
+        height: 10px;
+        width: 20px;
+    }
+
+    95% {
+        height: 10px;
+        width: 60px;
+    }
+
+    92% {
+        height: 10px;
+        width: 100px;
+    }
+
+    89% {
+        height: 10px;
+        width: 140px;
+    }
+
+    86% {
+        height: 10px;
+        width: 180px;
+    }
+
+    82% {
+        height: 10px;
+        width: 220px;
+    }
+
+    79% {
+        height: 10px;
+        width: 260px;
+    }
+
+    76% {
+        height: 10px;
+        width: 300px;
+    }
+
+    73% {
+        height: 10px;
+        width: 340px;
+    }
+
+    70% {
+        height: 10px;
+        width: 380px;
+    }
+
+    67% {
+        height: 10px;
+        width: 420px;
+    }
+
+    64% {
+        width: 460px;
+    }
+
+    61% {
+        height: 10px;
+        width: 500px;
+    }
+
+    58% {
+        height: 10px;
+        width: 540px;
+    }
+
+    55% {
+        height: 10px;
+        width: 580px;
+    }
+
+    52% {
+        height: 10px;
+        width: 600px;
+    }
+
+    49% {
+        height: 40px;
+    }
+
+    46% {
+        height: 80px;
+    }
+
+    43% {
+        height: 120px;
+    }
+
+    40% {
+        height: 160px;
+    }
+
+    37% {
+        height: 200px;
+    }
+
+    34% {
+        height: 240px;
+    }
+
+    31% {
+        height: 280px;
+    }
+
+    28% {
+        height: 320px;
+    }
+
+    25% {
+        height: 360px;
+    }
+
+    22% {
+        height: 400px;
+    }
+}
+
+@keyframes showText {
+
+    0%,
+    55% {
+        opacity: 0;
+    }
+
+    56% {
+        opacity: 0.1;
+    }
+
+    57% {
+        opacity: 0.2;
+    }
+
+    58% {
+        opacity: 0.3;
+    }
+
+    59% {
+        opacity: 0.4;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    61% {
+        opacity: 0.6;
+    }
+
+    62% {
+        opacity: 0.7;
+    }
+
+    63% {
+        opacity: 0.8;
+    }
+
+    64% {
+        opacity: 0.9;
+    }
+
+    65% {
+        opacity: 1;
+    }
+}
+
+@keyframes showText2 {
+
+    0%,
+    65% {
+        opacity: 0;
+    }
+
+    66% {
+        color: darkorange;
+        opacity: 0.1;
+    }
+
+    67% {
+        opacity: 0.2;
+    }
+
+    68% {
+        opacity: 0.3;
+    }
+
+    69% {
+        opacity: 0.4;
+    }
+
+    70% {
+        opacity: 0.5;
+    }
+
+    71% {
+        opacity: 0.6;
+    }
+
+    72% {
+        opacity: 0.7;
+    }
+
+    73% {
+        opacity: 0.8;
+    }
+
+    74% {
+        opacity: 0.9;
+    }
+
+    75% {
+        opacity: 1;
+    }
+}
+
+@keyframes showText1 {
+
+    0%,
+    79% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0.1;
+    }
+
+    81% {
+        opacity: 0.2;
+    }
+
+    82% {
+        opacity: 0.3;
+    }
+
+    83% {
+        opacity: 0.4;
+    }
+
+    84% {
+        opacity: 0.5;
+    }
+
+    85% {
+        opacity: 0.6;
+    }
+
+    86% {
+        opacity: 0.7;
+    }
+
+    87% {
+        opacity: 0.8;
+    }
+
+    88% {
+        opacity: 0.9;
+    }
+
+    89% {
+        opacity: 1;
+    }
+}
+
+@keyframes showBtn {
+
+    0%,
+    94% {
+        opacity: 0;
+    }
+
+    95% {
+        opacity: 0.2;
+    }
+
+    96% {
+        opacity: 0.4;
+    }
+
+    97% {
+        opacity: 0.6;
+    }
+
+    98% {
+        opacity: 0.8;
+    }
+
+    99% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    #div_first,
+    #div_second,
+    #div_cityNotFound {
+        height: 300px;
+        width: 500px;
+    }
+
+    #div_cityNotFound img {
+        height: 100px;
+        width: 100px;
+        margin-top: 20px;
+    }
+
+    #div_cityNotFound p {
+        font-size: 22px;
+        margin-top: 10px;
+    }
+
+    #h_myWeather {
+        margin-top: 10px;
+    }
+
+    #h3_text1 {
+        margin-top: 10px;
+    }
+
+    #h3_text2 {
+        margin-top: 120px;
+    }
+
+    #btn_searchCity {
+        border-radius: 15px;
+        height: 70px;
+        width: 150px;
+        top: 70%;
+        margin-left: -75px;
+        margin-top: -35px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+
+    #div_first,
+    #div_second,
+    #div_cityNotFound {
+        height: 250px;
+        width: 450px;
+    }
+
+    #h3_text1 {
+        margin-top: 3px;
+    }
+
+    #h3_text2 {
+        margin-top: 75px;
+    }
+
+    #btn_searchCity {
+        height: 40px;
+        width: 250px;
+        top: 70%;
+        margin-left: -125px;
+        margin-top: -20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    #div_first,
+    #div_second,
+    #div_cityNotFound {
+        width: 400px;
+    }
+
+    #h3_text1 {
+        margin-top: 0px;
+        font-size: 22px;
+    }
+
+    #h3_text2 {
+        margin-top: 70px;
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    #div_first,
+    #div_second,
+    #div_cityNotFound {
+        width: 350px;
+    }
+
+    #div_cityNotFound img {
+        margin-top: 10px;
+    }
+
+    #div_cityNotFound p {
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+    #h3_text1 {
+        font-size: 20px;
+    }
+
+    #h3_text2 {
+        margin-top: 70px;
+        font-size: 18px;
+    }
+
+    #btn_searchCity {
+        top: 65%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+    #div_first,
+    #div_second,
+    #div_cityNotFound {
+        width: 300px;
+    }
+
+    #h3_text2 {
+        margin-top: 65px;
+        font-size: 16px;
+    }
+
+    #btn_searchCity {
+        top: 73%;
+    }
+}
+
+/* ----------------------------- */
