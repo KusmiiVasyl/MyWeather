@@ -17,7 +17,7 @@ let dataFromApi3;
 
 //window load and set location
 window.addEventListener('load', () => {
-    let city = 'https://raw.githubusercontent.com/KusmiiVasyl/MY-WEATHER/master/js/city.list.json';
+    let city = 'https://raw.githubusercontent.com/KusmiiVasyl/MyWeather/master/js/city.list.json';
     fetch(city)
         .then(res => {
             return res.json();
